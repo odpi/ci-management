@@ -2,7 +2,7 @@
     name: global
 
     # lf-infra defaults
-    jenkins-ssh-credential: jenkins-ssh
+    jenkins-ssh-credential: jenkins
     github-org: odpi
     github_pr_whitelist:
       - jpwku
