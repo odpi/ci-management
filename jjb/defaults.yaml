@@ -15,4 +15,5 @@
     lftools-version: '<1.0.0'
     mvn-site-id: odpi-site
     mvn-staging-id: odpi-staging
+    git-clone-url: 'git@github.com:'
 
