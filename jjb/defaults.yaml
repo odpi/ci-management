@@ -1,0 +1,19 @@
+- defaults:
+    name: global
+
+    # lf-infra defaults
+    jenkins-ssh-credential: jenkins
+    github-org: odpi
+    github_pr_whitelist:
+      - jpwku
+      - tykeal
+      - zxiiro
+      - jwagantall
+      - askb
+    github_pr_admin_list:
+      - tykeal
+    lftools-version: '<1.0.0'
+    mvn-site-id: odpi-site
+    mvn-staging-id: odpi-staging
+    git-clone-url: 'git@github.com:'
+
