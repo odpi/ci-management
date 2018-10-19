@@ -1,0 +1,14 @@
+---
+- project:
+    name: egeria
+    project-name: egeria
+    project: egeria
+    mvn-settings: egeria-settings
+    archive-artifacts: ''
+    build-node: centos7-builder-2c-1g
+    cron: 'H 11 * * *'
+    stream:
+      - 'master':
+          branch: 'master'
+    jobs:
+      - '{project-name}-github-maven-jobs'
