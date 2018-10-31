@@ -4,4 +4,6 @@ GIT_URL=https://github.com
 JENKINS_HOSTNAME=vex-yul-odpi-jenkins-sandbox-1
 LOGS_SERVER=https://logs.odpi.org
 NEXUS_URL=https://nexus.odpi.org
+SIGUL_BRIDGE_IP=10.30.88.9
+SIGUL_KEY=odpi-sandbox
 SILO=sandbox
