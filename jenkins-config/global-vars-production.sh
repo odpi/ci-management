@@ -7,3 +7,4 @@ NEXUS_URL=https://nexus.odpi.org
 SIGUL_BRIDGE_IP=10.30.88.9
 SIGUL_KEY=odpi-release-2018
 SILO=production
+SONAR_URL=https://sonar.odpi.org
