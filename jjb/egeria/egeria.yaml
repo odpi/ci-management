@@ -13,5 +13,8 @@
     jobs:
       - '{project-name}-github-maven-jobs'
 
+- project:
+    name: egeria-views
+    project-name: egeria
     views:
       - common-view
