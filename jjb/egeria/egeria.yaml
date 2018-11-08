@@ -9,9 +9,20 @@
     cron: 'H 11 * * *'
     stream:
       - 'master':
-          branch: 'master'
+          branch: master
     jobs:
       - '{project-name}-github-maven-jobs'
+
+- project:
+    name: egeria-sonar
+    project-name: egeria
+    project: egeria
+    mvn-settings: egeria-settings
+    archive-artifacts: ''
+    build-node: centos7-builder-2c-1g
+    cron: 'H 11 * * *'
+    jobs:
+      - github-maven-sonar
 
 - project:
     name: egeria-views
