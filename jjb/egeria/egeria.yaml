@@ -21,6 +21,7 @@
     archive-artifacts: ''
     build-node: centos7-builder-4c-4g
     cron: 'H 11 * * *'
+    mvn-opts: '-Xmx2048m'
     jobs:
       - github-maven-sonar
 
