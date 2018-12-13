@@ -1,7 +1,7 @@
 ---
 - project:
     name: egeria
-    project-name: egeria
+    project-name: odpi-egeria
     project: egeria
     mvn-settings: egeria-settings
     archive-artifacts: ''
