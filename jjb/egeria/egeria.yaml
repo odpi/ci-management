@@ -15,7 +15,7 @@
 
 - project:
     name: egeria-sonar
-    project-name: egeria
+    project-name: odpi-egeria
     project: egeria
     mvn-settings: egeria-settings
     archive-artifacts: ''
@@ -27,6 +27,6 @@
 
 - project:
     name: egeria-views
-    project-name: egeria
+    project-name: odpi-egeria
     views:
       - common-view
