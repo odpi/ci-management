@@ -9,4 +9,4 @@
     build-node: centos7-builder-2c-1g
 
     views:
-      - common-view
+      - odpi-common-view

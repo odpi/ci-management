@@ -1,6 +1,6 @@
 ---
 - view-template:
-    id: 'common-view'
+    id: 'odpi-common-view'
     name: '{project-name}'
     view-type: list
     filter-executors: false
