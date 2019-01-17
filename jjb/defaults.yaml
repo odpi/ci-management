@@ -21,3 +21,5 @@
     mvn-staging-id: staging
     mvn-snapshot-id: snapshot
     nexus-snapshot-repo: snapshots
+    mvn-central: true
+    ossrh-profile-id: 56dff43ca17820
