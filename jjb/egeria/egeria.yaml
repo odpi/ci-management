@@ -26,7 +26,24 @@
       - github-maven-sonar
 
 - project:
+    name: 'egeria-maven-clm'
+    project-name: 'odpi-egeria'
+    project: egeria
+    mvn-settings: egeria-settings
+    build-node: centos7-builder-4c-4g
+    cron: '@daily'
+    mvn-opts: '-Xmx2048m'
+    jobs:
+      - github-maven-clm
+    stream:
+      - 'egeria-release-1.0':
+          branch: 'egeria-release-1.0'
+      - 'egeria-release-2.0':
+          branch: 'egeria-release-2.0'
+
+- project:
     name: egeria-views
     project-name: odpi-egeria
     views:
       - odpi-common-view
+
