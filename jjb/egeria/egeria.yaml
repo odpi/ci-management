@@ -13,6 +13,8 @@
     jobs:
       - '{project-name}-github-maven-jobs'
     sign-artifacts: true
+    mvn-central: '{mvn_central}'
+    ossrh-profile-id: '{ossrh_profile_id}'
 
 - project:
     name: egeria-sonar
