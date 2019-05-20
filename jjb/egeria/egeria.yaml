@@ -12,7 +12,6 @@
           branch: master
     java-version:
       - 'openjdk8'
-      - 'openjdk11'
     jobs:
       - '{project-name}-github-maven-jobs'
     sign-artifacts: true
@@ -32,7 +31,6 @@
           branch: master
     java-version:
       - 'openjdk8'
-      - 'openjdk11'
     jobs:
       - '{project-name}-github-maven-jobs'
     sign-artifacts: true
