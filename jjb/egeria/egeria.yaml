@@ -10,8 +10,6 @@
     stream:
       - 'master':
           branch: master
-    java-version:
-      - 'openjdk8'
     jobs:
       - '{project-name}-github-maven-jobs'
     sign-artifacts: true
@@ -29,8 +27,6 @@
     stream:
       - 'master':
           branch: master
-    java-version:
-      - 'openjdk8'
     jobs:
       - '{project-name}-github-maven-jobs'
     sign-artifacts: true
