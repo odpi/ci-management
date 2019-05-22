@@ -45,6 +45,11 @@
     jobs:
       - github-maven-sonar
 
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-project-key: odpi_egeria
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+
 - project:
     name: 'egeria-maven-clm'
     project-name: 'odpi-egeria'
