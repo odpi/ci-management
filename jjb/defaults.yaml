@@ -23,3 +23,7 @@
     nexus-snapshot-repo: snapshots
     mvn_central: true
     ossrh_profile_id: 56dff43ca17820
+
+    # Sonarcloud
+    sonarcloud_project_organization: odpi
+    sonarcloud_api_token: a62308f92d67ddcefc1196c305b8ed418efd1c2b
