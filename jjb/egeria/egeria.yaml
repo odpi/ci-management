@@ -10,6 +10,8 @@
     stream:
       - 'master':
           branch: master
+      - 'egeria-release-1.0':
+          branch: 'egeria-release-1.0'
     jobs:
       - github-maven-clm
       - github-maven-merge
@@ -36,20 +38,6 @@
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-project-key: odpi_egeria
     sonarcloud-api-token: '{sonarcloud_api_token}'
-
-- project:
-    name: 'egeria-maven-clm'
-    project-name: 'odpi-egeria'
-    project: egeria
-    mvn-settings: egeria-settings
-    build-node: centos7-builder-4c-4g
-    cron: '@daily'
-    mvn-opts: '-Xmx2048m'
-    jobs:
-      - github-maven-clm
-    stream:
-      - 'egeria-release-1.0':
-          branch: 'egeria-release-1.0'
 
 - project:
     name: egeria-views
