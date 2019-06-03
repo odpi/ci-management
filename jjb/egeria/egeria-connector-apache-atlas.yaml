@@ -1,0 +1,23 @@
+---
+- project:
+    name: egeria-connector-apache-atlas
+    project-name: egeria-connector-apache-atlas
+    project: egeria-connector-apache-atlas
+    mvn-settings: egeria-settings
+    archive-artifacts: ''
+    build-node: centos7-builder-2c-1g
+    cron: 'H 11 * * *'
+    stream:
+      - 'master':
+          branch: master
+    jobs:
+      - '{project-name}-github-maven-jobs'
+    sign-artifacts: true
+    mvn-central: '{mvn_central}'
+    ossrh-profile-id: '{ossrh_profile_id}'
+
+- project:
+    name: egeria-connector-apache-atlas-views
+    project-name: egeria-connector-apache-atlas
+    views:
+      - odpi-common-view
