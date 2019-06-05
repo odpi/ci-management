@@ -1,0 +1,27 @@
+---
+- project:
+    name: egeria-configure
+    project-name: egeria-configure
+    project: egeria
+    mvn-settings: egeria-settings
+    archive-artifacts: ''
+    build-node: centos7-docker-4c-4g
+    cron: 'H 11 * * *'
+    mvn-snapshot-id: logs
+    container-public-registry: ''
+    container-snapshot-registry: ''
+    stream:
+      - 'master':
+          branch: master
+    jobs:
+      - github-maven-docker-verify:
+          mvn-goals: 'clean install'
+          mvn-params: '-Ddocker -Ddocker.repo=odpiadmin -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/configure'
+          build-timeout: 180
+
+- project:
+    name: maven-docker-views
+    view-name: egeria-docker
+    views:
+      - common-view
+    view-regex: '.*-docker-.*'
