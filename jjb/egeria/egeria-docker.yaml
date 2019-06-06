@@ -1,7 +1,6 @@
 ---
 - project:
-    name: egeria-configure
-    project-name: egeria-configure
+    name: egeria-docker
     project: egeria
     mvn-settings: egeria-settings
     archive-artifacts: ''
@@ -10,14 +9,23 @@
     mvn-snapshot-id: logs
     container-public-registry: ''
     container-snapshot-registry: ''
+    build-timeout: 180
     stream:
       - 'master':
           branch: master
     jobs:
       - github-maven-docker-verify:
+          project-name: egeria-configure
           mvn-goals: 'clean install'
-          mvn-params: '-Ddocker -Ddocker.repo=odpiadmin -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/configure'
-          build-timeout: 180
+          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/configure'
+      - github-maven-docker-verify:
+          project-name: egeria-atlas
+          mvn-goals: 'clean install'
+          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/atlas'
+      - github-maven-docker-verify:
+          project-name: egeria-apache-atlas
+          mvn-goals: 'clean install'
+          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/apache-atlas/'
 
 - project:
     name: maven-docker-views
