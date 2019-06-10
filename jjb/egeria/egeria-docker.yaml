@@ -26,6 +26,22 @@
           project-name: egeria-apache-atlas
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/apache-atlas/'
+      - github-maven-docker-verify:
+          project-name: egeria
+          mvn-goals: 'clean install'
+          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/egeria/'
+      - github-maven-docker-verify:
+          project-name: egeria-gaian
+          mvn-goals: 'clean install'
+          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/gaian/'
+      - github-maven-docker-verify:
+          project-name: egeria-omrs-monitor
+          mvn-goals: 'clean install'
+          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/omrs-monitor/'
+      - github-maven-docker-verify:
+          project-name: egeria-ranger
+          mvn-goals: 'clean install'
+          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/ranger/'
 
 - project:
     name: maven-docker-views
