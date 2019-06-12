@@ -9,36 +9,37 @@
     mvn-snapshot-id: logs
     container-public-registry: ''
     container-snapshot-registry: ''
+    container-staging-registry: ''
     build-timeout: 180
     stream:
       - 'master':
           branch: master
     jobs:
-      - github-maven-docker-verify:
+      - github-maven-docker-stage:
           project-name: egeria-configure
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/configure'
-      - github-maven-docker-verify:
+      - github-maven-docker-stage:
           project-name: egeria-atlas
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/atlas'
-      - github-maven-docker-verify:
+      - github-maven-docker-stage:
           project-name: egeria-apache-atlas
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/apache-atlas/'
-      - github-maven-docker-verify:
+      - github-maven-docker-stage:
           project-name: egeria
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/egeria/'
-      - github-maven-docker-verify:
+      - github-maven-docker-stage:
           project-name: egeria-gaian
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/gaian/'
-      - github-maven-docker-verify:
+      - github-maven-docker-stage:
           project-name: egeria-omrs-monitor
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/omrs-monitor/'
-      - github-maven-docker-verify:
+      - github-maven-docker-stage:
           project-name: egeria-ranger
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/ranger/'
