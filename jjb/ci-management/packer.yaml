@@ -11,5 +11,7 @@
     platforms:
       - centos-7
 
-    templates: builder
+    templates:
+       - builder
+       - docker
 
