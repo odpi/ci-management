@@ -3,7 +3,6 @@
 
     jobs:
       - '{project-name}-github-packer-jobs'
-
     project: ci-management
     project-name: ci-management
     branch: master
@@ -11,5 +10,7 @@
     platforms:
       - centos-7
 
-    templates: builder
+    templates:
+       - builder
+       - docker
 
