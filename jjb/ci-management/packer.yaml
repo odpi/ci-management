@@ -7,6 +7,7 @@
     project: ci-management
     project-name: ci-management
     branch: master
+    packer-version: 1.3.5
     build-node: centos7-builder-2c-1g
     platforms:
       - centos-7
