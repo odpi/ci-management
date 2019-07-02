@@ -20,10 +20,6 @@
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/configure'
       - github-maven-docker-stage:
-          project-name: egeria-atlas
-          mvn-goals: 'clean install'
-          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/atlas'
-      - github-maven-docker-stage:
           project-name: egeria-apache-atlas
           mvn-goals: 'clean install'
           mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/apache-atlas/'
