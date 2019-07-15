@@ -33,15 +33,16 @@
     archive-artifacts: ''
     build-node: centos7-builder-4c-4g
     cron: '@daily'
-    mvn-opts: '-Xmx2048m'
+    build-timeout: 180
+    mvn-opts: '-Xmx5120m'
+    mvn-params: -DfindBugs -Dsonar.java.spotbugs.reportPaths="target/spotbugsXml.xml" -Dsonar.java.pmd.reportPaths="target/pmd.xml"
     jobs:
-      - github-maven-sonar
+      - odpi-github-maven-sonar
 
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-project-key: odpi_egeria
     sonarcloud-api-token: '{sonarcloud_api_token}'
-
 - project:
     name: egeria-views
     project-name: odpi-egeria
