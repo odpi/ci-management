@@ -33,7 +33,9 @@
     archive-artifacts: ''
     build-node: centos7-builder-4c-4g
     cron: '@daily'
+    mvn-params: '-DfindBugs -sonar.java.spotbugs.reportPaths="target/spotbugsXml.xml" -Dsonar.java.pmd.reportPaths="target/pmd.xml"'
     mvn-opts: '-Xmx2048m'
+    java-opts: '-Xmx5120m'
     jobs:
       - github-maven-sonar
 
