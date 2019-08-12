@@ -34,11 +34,11 @@
     build-node: centos7-builder-4c-4g
     cron: '@daily'
     mvn-params: '-DfindBugs -sonar.java.spotbugs.reportPaths="target/spotbugsXml.xml" -Dsonar.java.pmd.reportPaths="target/pmd.xml"'
-    mvn-opts: '-Xmx2048m'
-    java-opts: '-Xmx5120m'
+    mvn-opts: '-Xmx5120M -Xss512M -XX:MaxPermSize=2048M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC'
+    java-opts: '-Xmx5G'
+    build-timeout: 180
     jobs:
       - github-maven-sonar
-
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-project-key: odpi_egeria
