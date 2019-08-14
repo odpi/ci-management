@@ -38,7 +38,7 @@
       - github-maven-docker-stage:
           project-name: egeria-ranger
           mvn-goals: 'clean install'
-          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/ranger/'
+          mvn-params: '-Ddocker -Ddocker.repo=odpi -Ddockerfile.useMavenSettingsForAuth=true -f open-metadata-resources/open-metadata-deployment/docker/apache-ranger-admin/'
 
 - project:
     name: maven-docker-views
