@@ -7,6 +7,7 @@
     archive-artifacts: ''
     build-node: centos7-builder-2c-1g
     cron: 'H 11 * * *'
+    build-timeout: 180
     stream:
       - 'master':
           branch: master
