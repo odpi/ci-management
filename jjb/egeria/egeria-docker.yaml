@@ -2,6 +2,7 @@
 - project:
     name: egeria-docker
     project: egeria
+    disable-job: true
     mvn-settings: egeria-settings
     archive-artifacts: ''
     build-node: centos7-docker-4c-4g
