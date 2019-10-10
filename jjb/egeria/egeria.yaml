@@ -32,6 +32,7 @@
     project: egeria
     mvn-settings: egeria-settings
     archive-artifacts: ''
+    disable-job: true
     build-node: centos7-builder-4c-4g
     cron: '@daily'
     mvn-params: '-DfindBugs -sonar.java.spotbugs.reportPaths="target/spotbugsXml.xml" -Dsonar.java.pmd.reportPaths="target/pmd.xml"'
