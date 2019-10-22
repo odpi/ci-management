@@ -12,7 +12,11 @@
       - 'master':
           branch: master
     jobs:
-      - '{project-name}-github-maven-jobs'
+      - github-maven-clm:
+          disable-job: true
+      - github-maven-merge
+      - github-maven-stage
+      - github-maven-verify
     sign-artifacts: true
     mvn-central: '{mvn_central}'
     ossrh-profile-id: '{ossrh_profile_id}'
