@@ -17,8 +17,10 @@
       - github-maven-clm:
           disable-job: true
       - github-maven-merge
-      - github-maven-stage
+      - github-maven-stage:
+          disable-job: true
       - github-maven-verify:
+          disable-job: true
           mvn-goals: 'clean deploy -DskipFVT'
           java-version:
               - 'openjdk8'
